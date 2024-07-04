@@ -1,7 +1,16 @@
+import {useRoutes} from "react-router-dom";
+import {routes} from "./routes/routes.tsx";
+import {Suspense} from "react";
+
 function App() {
-  return (
-    <div className='bg-red-400 w-full h-32'>
-      <span className='font-bold text-black'>this is a tailwind test</span>
+
+    const content = useRoutes(routes)
+
+    return (
+    <div className='w-full h-screen'>
+        <Suspense fallback={<div>this is loading!!</div>}>
+            {content}
+        </Suspense>
     </div>
   )
 }
