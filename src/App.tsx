@@ -1,16 +1,18 @@
-import {useRoutes} from "react-router-dom";
-import {routes} from "./routes/routes.tsx";
-import {Suspense} from "react";
+import { Suspense } from 'react'
+import { useRoutes } from 'react-router-dom'
+
+import Appbar from './components/global/appbar/Appbar'
+import { routes } from './routes/routes'
 
 function App() {
+  const content = useRoutes(routes)
 
-    const content = useRoutes(routes)
-
-    return (
+  return (
     <div className='w-full h-screen'>
-        <Suspense fallback={<div>this is loading!!</div>}>
-            {content}
-        </Suspense>
+      <Suspense fallback={<div>this is loading!!</div>}>
+        <Appbar />
+        {content}
+      </Suspense>
     </div>
   )
 }
