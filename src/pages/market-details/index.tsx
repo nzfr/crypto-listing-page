@@ -55,29 +55,35 @@ const MarketDetails = () => {
   }, [activeOrders])
 
   return (
-    <div className='overflow-y-hidden w-full  p-16 bg-gray-100 flex flex-col justify-start items-start gap-4'>
-      <div className='w-full h-16 flex flex-row justify-between items-start gap-2  p-4 rounded-md bg-gray-200'>
+    <div className='overflow-y-hidden w-full h-full  p-16 bg-bg-color flex flex-col justify-start items-start gap-4'>
+      <div className='border-b border-b-black w-full h-16 flex flex-row justify-start items-start gap-2  p-4 bg-gray-200'>
         <div
           onClick={() => setSelectedTab('BUY')}
           className={`${
-            selectedTab === 'BUY' ? 'bg-gray-400' : 'bg-gray-300'
-          } w-full h-full flex flex-row justify-center items-center cursor-pointer rounded-md p-2`}
+            selectedTab === 'BUY'
+              ? 'bg-gray-400 font-bold'
+              : 'bg-gray-300 text-disabled font-normal'
+          } h-full flex flex-row justify-center items-center cursor-pointer px-2`}
         >
           خرید
         </div>
         <div
           onClick={() => setSelectedTab('SELL')}
           className={`${
-            selectedTab === 'SELL' ? 'bg-gray-400' : 'bg-gray-300'
-          } w-full h-full flex flex-row justify-center items-center cursor-pointer rounded-md p-2`}
+            selectedTab === 'SELL'
+              ? 'bg-gray-400 font-bold'
+              : 'bg-gray-300 text-disabled font-normal'
+          } h-full flex flex-row justify-center items-center cursor-pointer px-2`}
         >
           فروش
         </div>
         <div
           onClick={() => setSelectedTab('TRADE')}
           className={`${
-            selectedTab === 'TRADE' ? 'bg-gray-400' : 'bg-gray-300'
-          } w-full h-full flex flex-row justify-center items-center cursor-pointer rounded-md p-2`}
+            selectedTab === 'TRADE'
+              ? 'bg-gray-400 font-bold'
+              : 'bg-gray-300 text-disabled font-normal'
+          } h-full flex flex-row justify-center items-center cursor-pointer px-2`}
         >
           معاملات
         </div>

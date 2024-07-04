@@ -12,7 +12,7 @@ const Appbar = () => {
   const title = currentPath?.title
 
   return (
-    <div className='w-full bg-gray-300 z-10 flex flex-row justify-start h-16 sticky p-8 shadow-2xl gap-4 items-center'>
+    <div className='w-full bg-bg-color z-10 flex flex-row justify-start h-16 sticky p-8 shadow-2xl gap-4 items-center'>
       {title}
     </div>
   )
